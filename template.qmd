@@ -56,6 +56,7 @@ plot(cars, col = "#011451", pch = 19,
 
 ```{r}
 #| eval: false
+#| echo: true
 library(ggplot2)
 
 ggplot(cars, aes(x = speed, y = dist)) +
@@ -98,8 +99,10 @@ Something interesting happened here.
 
 ## Thank you {.center}
 
+::: {style="margin-left: 10%;"}
 Questions?
+:::
 
-::: {style="font-size: 0.7em; margin-top: 1em;"}
+::: {style="font-size: 0.7em; margin-top: 1em; margin-left: 10%;"}
 [your.email@glasgow.ac.uk](mailto:your.email@glasgow.ac.uk)
 :::

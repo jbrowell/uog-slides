@@ -66,49 +66,31 @@ $selection-bg:                      $uog-navy;
 // ============================================================
 
 .reveal .slides section#title-slide {
-  background-color: $uog-navy;
-  color: white;
-  text-align: left;
-  height: 100%; // needed so % min-height resolves on children
-
-  // .title occupies the logo zone (min-height: 14%) and sits to the
-  // right of the logo (margin-left: 10%). align-items: flex-end
-  // places the text at the bottom of this zone, level with the logo.
   .title {
     min-height: 14%;
-    margin-left: 10%;
-    display: flex;
-    align-items: flex-end;
-    box-sizing: border-box;
-    color: white;
-    font-size: 1.55em;
+    color: $uog-navy;
+    font-size: 2.0em;
     font-weight: 700;
-    line-height: 1.2;
-    border-left: 5px solid $uog-light-blue;
-    padding-left: 0.45em;
   }
 
   .subtitle {
-    color: $uog-light-blue;
+    color: $uog-dark-blue;
     font-size: 0.95em;
     font-weight: 300;
     margin-top: 0.15em;
-    margin-left: calc(10% + 0.45em + 5px);
   }
 
   p.author,
   .quarto-title-authors {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.9);
     font-size: 0.65em;
     margin-top: 1.4em;
-    margin-left: calc(10% + 0.45em + 5px);
   }
 
   p.date,
   .date {
-    color: rgba(255, 255, 255, 0.65);
-    font-size: 0.55em;
-    margin-left: calc(10% + 0.45em + 5px);
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 0.65em;
   }
 }
 
@@ -120,25 +102,29 @@ $selection-bg:                      $uog-navy;
 
 .reveal .slides section.level1,
 .reveal .slides section.section-slide {
-  background-color: $uog-dark-blue;
-  color: white;
-  height: 100%; // needed so % min-height resolves on children
+  // background-color: $uog-dark-blue;
+  // color: white;
+  // height: 100%; // needed so % min-height resolves on children
 
   h1, h2 {
     min-height: 14%;
-    margin-left: 10%;
-    display: flex;
-    align-items: flex-end;
-    box-sizing: border-box;
-    color: white;
+    // margin-left: 10%;
+    // display: flex;
+    // align-items: flex-end;
+    // box-sizing: border-box;
+    color: $uog-navy;
     font-size: 1.8em;
     font-weight: 700;
-    border-bottom: 3px solid $uog-light-blue;
+    line-height: 1.2;
+    margin-left: 10%;
+    // border-left: 5px solid $uog-light-blue;
+    // padding-left: 0.45em;
+    border-bottom: 3px solid $uog-navy;
     padding-bottom: 0.15em;
   }
 
   p {
-    color: rgba(255, 255, 255, 0.85);
+    // color: rgba(255, 255, 255, 0.85);
     font-size: 0.85em;
   }
 }
