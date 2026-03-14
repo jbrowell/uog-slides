@@ -2,7 +2,7 @@
 
 A [Quarto](https://quarto.org) RevealJS presentation theme following the [University of Glasgow brand guidelines](https://www.gla.ac.uk/myglasgow/staff/brandtoolkit/), 2026 update.
 
-Previous the template on this repo's [GitHub page](https://jbrowell.github.io/uog-slides/#/title-slide).
+Preview the template on this repo's [GitHub page](https://jbrowell.github.io/uog-slides/#/title-slide).
 
 ## Installation
 
