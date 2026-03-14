@@ -5,7 +5,7 @@ A [Quarto](https://quarto.org) RevealJS presentation theme following the [Univer
 ## Installation
 
 ```bash
-quarto add <github-user>/uog-slides
+quarto add jbrowell/uog-slides
 ```
 
 Or clone this repo and use the extension directly from `_extensions/uog-slides/`.
