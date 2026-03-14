@@ -99,10 +99,10 @@ Something interesting happened here.
 
 ## Thank you {.center}
 
-::: {style="margin-left: 10%;"}
+::: {style="margin-left: 12%;"}
 Questions?
 :::
 
-::: {style="font-size: 0.7em; margin-top: 1em; margin-left: 10%;"}
+::: {style="font-size: 0.7em; margin-top: 1em; margin-left: 12%;"}
 [your.email@glasgow.ac.uk](mailto:your.email@glasgow.ac.uk)
 :::
