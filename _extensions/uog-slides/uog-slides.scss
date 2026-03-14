@@ -134,8 +134,8 @@ $selection-bg:                      $uog-navy;
 // ============================================================
 
 .reveal .slides section.level2 h2 {
-  min-height: 14%;
-  margin-left: 10%;
+  min-height: 8%;
+  margin-left: 12%;
   display: flex;
   align-items: flex-end;
   box-sizing: border-box;
@@ -145,13 +145,19 @@ $selection-bg:                      $uog-navy;
   margin-bottom: 0.5em;
 }
 
+// /* When the browser is in fullscreen mode */
+// .reveal:fullscreen .slides section.level2 h2 {
+//   margin-left: 50%;
+// }
+
+
 // ============================================================
 // LOGO — repositioned to top-left on every slide
 // ============================================================
 
 // Quarto's footer.css sets max-height: 2.2rem — !important required to override
 .reveal .slide-logo {
-  max-height: 20vh !important;
+  max-height: 15vh !important;
   width: auto !important;
   top: 0 !important;
   left: 0 !important;
