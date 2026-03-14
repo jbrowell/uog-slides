@@ -97,12 +97,15 @@ Something interesting happened here.
 2. Second take-away
 3. Third take-away
 
-## Thank you {.center}
+## Thank you
 
-::: {style="margin-left: 12%;"}
+
+<!-- ::: {.r-stack} -->
+
+::: {style="text-align: center; margin-top: 20vh"}
 Questions?
 :::
 
-::: {style="font-size: 0.7em; margin-top: 1em; margin-left: 12%;"}
+::: {style="font-size: 0.7em; text-align: center; margin-top: 0vh"}
 [your.email@glasgow.ac.uk](mailto:your.email@glasgow.ac.uk)
 :::
