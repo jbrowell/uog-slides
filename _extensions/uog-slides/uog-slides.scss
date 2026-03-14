@@ -102,29 +102,19 @@ $selection-bg:                      $uog-navy;
 
 .reveal .slides section.level1,
 .reveal .slides section.section-slide {
-  // background-color: $uog-dark-blue;
-  // color: white;
-  // height: 100%; // needed so % min-height resolves on children
 
   h1, h2 {
     min-height: 14%;
-    // margin-left: 10%;
-    // display: flex;
-    // align-items: flex-end;
-    // box-sizing: border-box;
     color: $uog-navy;
     font-size: 1.8em;
     font-weight: 700;
     line-height: 1.2;
     margin-left: 10%;
-    // border-left: 5px solid $uog-light-blue;
-    // padding-left: 0.45em;
     border-bottom: 3px solid $uog-navy;
     padding-bottom: 0.15em;
   }
 
   p {
-    // color: rgba(255, 255, 255, 0.85);
     font-size: 0.85em;
   }
 }
@@ -134,8 +124,10 @@ $selection-bg:                      $uog-navy;
 // ============================================================
 
 .reveal .slides section.level2 h2 {
-  min-height: 14%;
-  margin-left: 10%;
+  // min-height: 14%;
+  // margin-left: 10%;
+  min-height: 8%;
+  margin-left: 12%;
   display: flex;
   align-items: flex-end;
   box-sizing: border-box;
@@ -145,13 +137,20 @@ $selection-bg:                      $uog-navy;
   margin-bottom: 0.5em;
 }
 
+// /* When the browser is in fullscreen mode */ NOT WORKING
+// .reveal:fullscreen .slides section.level2 h2 {
+//   margin-left: 50%;
+// }
+
+
 // ============================================================
 // LOGO — repositioned to top-left on every slide
 // ============================================================
 
 // Quarto's footer.css sets max-height: 2.2rem — !important required to override
 .reveal .slide-logo {
-  max-height: 20vh !important;
+  // max-height: 20vh !important;
+  max-height: 15vh !important;
   width: auto !important;
   top: 0 !important;
   left: 0 !important;
@@ -164,6 +163,12 @@ $selection-bg:                      $uog-navy;
     max-height: 12vh !important;
   }
 }
+
+// /* When the browser is in fullscreen mode */ NOT WORKING
+// .reveal:fullscreen .slide-logo {
+//  max-height: 12vh !important;
+// }
+
 
 // ============================================================
 // FOOTER
