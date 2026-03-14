@@ -47,6 +47,8 @@ rsconnect/
 
 # Quarto rendered output
 .quarto/
+*_files/
+*.html
 
 # Claude
 .claude/*
