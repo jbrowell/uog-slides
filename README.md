@@ -2,6 +2,8 @@
 
 A [Quarto](https://quarto.org) RevealJS presentation theme following the [University of Glasgow brand guidelines](https://www.gla.ac.uk/myglasgow/staff/brandtoolkit/), 2026 update.
 
+Previous the template on this repo's [GitHub page](https://jbrowell.github.io/uog-slides/#/title-slide).
+
 ## Installation
 
 ```bash
@@ -83,3 +85,10 @@ Utility CSS classes (e.g. `[text]{.uog-navy}`) are available for all colours abo
   - `uog-logo-blue.png` — unboxed blue-text version (available for custom use)
 - Source logo files: [`brand_assets/Main UofG logo artwork/`](brand_assets/Main%20UofG%20logo%20artwork/)
 - Colours: <https://www.gla.ac.uk/myglasgow/staff/brandtoolkit/colour/>
+
+## Contributors
+
+To update the GitHub page, run:
+```bash
+quarto publish gh-pages
+```
