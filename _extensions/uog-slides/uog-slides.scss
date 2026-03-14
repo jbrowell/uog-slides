@@ -124,10 +124,8 @@ $selection-bg:                      $uog-navy;
 // ============================================================
 
 .reveal .slides section.level2 h2 {
-  // min-height: 14%;
-  // margin-left: 10%;
-  min-height: 8%;
-  margin-left: 12%;
+  min-height: 12%;
+  margin-left: 9%;
   display: flex;
   align-items: flex-end;
   box-sizing: border-box;
@@ -137,10 +135,14 @@ $selection-bg:                      $uog-navy;
   margin-bottom: 0.5em;
 }
 
-// /* When the browser is in fullscreen mode */ NOT WORKING
-// .reveal:fullscreen .slides section.level2 h2 {
-//   margin-left: 50%;
-// }
+// In fullscreen the logo is taller/wider (15vh of the full display height),
+// so increase clearance. The :fullscreen element is <html>/<body>, not
+// .reveal — hence `:fullscreen .reveal …`, not `.reveal:fullscreen …`.
+:fullscreen .reveal .slides section.level2 h2,
+:-webkit-full-screen .reveal .slides section.level2 h2 {
+  min-height: 12%;
+  margin-left: 17%;
+}
 
 
 // ============================================================
@@ -150,7 +152,7 @@ $selection-bg:                      $uog-navy;
 // Quarto's footer.css sets max-height: 2.2rem — !important required to override
 .reveal .slide-logo {
   // max-height: 20vh !important;
-  max-height: 15vh !important;
+  max-height: 20vh !important;
   width: auto !important;
   top: 0 !important;
   left: 0 !important;
@@ -163,12 +165,6 @@ $selection-bg:                      $uog-navy;
     max-height: 12vh !important;
   }
 }
-
-// /* When the browser is in fullscreen mode */ NOT WORKING
-// .reveal:fullscreen .slide-logo {
-//  max-height: 12vh !important;
-// }
-
 
 // ============================================================
 // FOOTER
