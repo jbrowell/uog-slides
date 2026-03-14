@@ -7,7 +7,7 @@ Previous the template on this repo's [GitHub page](https://jbrowell.github.io/uo
 ## Installation
 
 ```bash
-quarto add <github-user>/uog-slides
+quarto add jbrowell/uog-slides
 ```
 
 Or clone this repo and use the extension directly from `_extensions/uog-slides/`.
