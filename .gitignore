@@ -46,8 +46,6 @@ po/*~
 rsconnect/
 
 # Quarto rendered output
-*.html
-*_files/
 .quarto/
 
 # Claude
