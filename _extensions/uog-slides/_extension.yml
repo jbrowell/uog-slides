@@ -1,0 +1,16 @@
+title: UoG Slides
+author: University of Glasgow
+version: 0.1.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    revealjs:
+      theme: [default, uog-slides.scss]
+      logo: assets/uog-logo-boxed.png
+      slide-number: true
+      transition: fade
+      background-transition: fade
+      controls: true
+      progress: true
+      history: true
+      center: false

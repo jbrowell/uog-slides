@@ -1,0 +1,105 @@
+---
+title: "Presentation Title"
+subtitle: "Subtitle or event name"
+author: "Author Name"
+date: last-modified
+date-format: "D MMMM YYYY"
+format:
+  uog-slides-revealjs:
+    footer: "University of Glasgow"
+    chalkboard: true # enable writing on top of slides
+---
+
+# Introduction {.section-slide}
+
+## Slide with bullets
+
+- First point about the topic
+- Second point with **bold** emphasis
+- Third point with `inline code`
+
+## Slide with two columns
+
+:::: {.columns}
+::: {.column width="50%"}
+**Left column**
+
+Some content here — text, a list, or a figure.
+:::
+::: {.column width="50%"}
+**Right column**
+
+More content on the right side of the slide.
+:::
+::::
+
+## Slide with a figure
+
+```{r}
+#| echo: false
+#| fig-height: 4
+plot(cars, col = "#011451", pch = 19,
+     xlab = "Speed", ylab = "Distance")
+```
+
+## Slide with a table
+
+| Column A | Column B | Column C |
+|----------|----------|----------|
+| Value 1  | 12.3     | Yes      |
+| Value 2  | 45.6     | No       |
+| Value 3  | 78.9     | Yes      |
+
+# Methods {.section-slide}
+
+## Code example
+
+```{r}
+#| eval: false
+library(ggplot2)
+
+ggplot(cars, aes(x = speed, y = dist)) +
+  geom_point(colour = "#011451") +
+  labs(x = "Speed", y = "Distance")
+```
+
+## Callout boxes
+
+::: {.callout-note}
+This is a note — extra context or references.
+:::
+
+::: {.callout-tip}
+This is a tip — a helpful suggestion.
+:::
+
+::: {.callout-important}
+This is important — don't miss it.
+:::
+
+# Results {.section-slide}
+
+## Key finding
+
+Something interesting happened here.
+
+- Bullet one
+- Bullet two
+
+> A blockquote for emphasis or a key quote.
+
+# Summary {.section-slide}
+
+## Take-aways
+
+1. First take-away
+2. Second take-away
+3. Third take-away
+
+## Thank you {.center}
+
+Questions?
+
+::: {style="font-size: 0.7em; margin-top: 1em;"}
+[your.email@glasgow.ac.uk](mailto:your.email@glasgow.ac.uk)
+:::

@@ -1,0 +1,237 @@
+/*-- scss:defaults --*/
+
+// ============================================================
+// FONTS
+// ============================================================
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+
+// ============================================================
+// UoG BRAND COLOURS
+// ============================================================
+
+// Primary
+$uog-navy:          #011451;
+
+// Secondary — dark
+$uog-dark-purple:   #4C2683;
+$uog-dark-pink:     #A60367;
+$uog-dark-green:    #405D18;
+$uog-dark-blue:     #005398;
+$uog-dark-red:      #7D2239;
+
+// Secondary — light
+$uog-light-purple:  #A5A1CE;
+$uog-light-pink:    #E98BAF;
+$uog-light-green:   #81C071;
+$uog-light-blue:    #4DBBC6;
+$uog-light-yellow:  #F2D25C;
+
+// ============================================================
+// REVEALJS THEME VARIABLES
+// ============================================================
+$font-family-sans-serif:            'Noto Sans', sans-serif;
+$presentation-font-size-root:       32px;
+$presentation-heading-font:         'Noto Sans', sans-serif;
+$presentation-heading-color:        $uog-navy;
+$presentation-heading-font-weight:  600;
+$presentation-heading-line-height:  1.2;
+$body-color:                        #1a1a1a;
+$link-color:                        $uog-dark-blue;
+$link-color-hover:                  lighten($link-color, 15%);
+$selection-color:                   white;
+$selection-bg:                      $uog-navy;
+
+
+/*-- scss:rules --*/
+
+// ============================================================
+// LAYOUT CONSTANTS
+// Slide: 1050×700 px internal, RevealJS margin: 0.1.
+// Logo: position:fixed, top:0, left:0, max-height:20vh, aspect 1.846.
+// On 16:9 displays (height-limited), the logo overlaps ~87 px of
+// slide height and ~70 px of slide width in internal coordinates.
+// Using % units is correct here — unlike vw/vh, they live in the
+// slide's own coordinate space and scale with the slide, not the
+// raw viewport.
+//   margin-left: 10%  → 105 px internal (clears ~70 px logo width)
+//   min-height:  14%  → 98 px internal  (clears ~88 px logo height)
+// Sections that have class .center (title-slide, section-slides)
+// need height:100% set explicitly so % min-height resolves on children.
+// ============================================================
+
+// ============================================================
+// TITLE SLIDE
+// The actual title slide has id="title-slide" and class
+// "quarto-title-block center" — NOT class "title-slide".
+// ============================================================
+
+.reveal .slides section#title-slide {
+  background-color: $uog-navy;
+  color: white;
+  text-align: left;
+  height: 100%; // needed so % min-height resolves on children
+
+  // .title occupies the logo zone (min-height: 14%) and sits to the
+  // right of the logo (margin-left: 10%). align-items: flex-end
+  // places the text at the bottom of this zone, level with the logo.
+  .title {
+    min-height: 14%;
+    margin-left: 10%;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    color: white;
+    font-size: 1.55em;
+    font-weight: 700;
+    line-height: 1.2;
+    border-left: 5px solid $uog-light-blue;
+    padding-left: 0.45em;
+  }
+
+  .subtitle {
+    color: $uog-light-blue;
+    font-size: 0.95em;
+    font-weight: 300;
+    margin-top: 0.15em;
+    margin-left: calc(10% + 0.45em + 5px);
+  }
+
+  p.author,
+  .quarto-title-authors {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.65em;
+    margin-top: 1.4em;
+    margin-left: calc(10% + 0.45em + 5px);
+  }
+
+  p.date,
+  .date {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.55em;
+    margin-left: calc(10% + 0.45em + 5px);
+  }
+}
+
+// ============================================================
+// SECTION DIVIDER SLIDES
+// Section dividers have class "title-slide slide level1 section-slide center".
+// Note: "title-slide" here is on section dividers, NOT the actual title slide.
+// ============================================================
+
+.reveal .slides section.level1,
+.reveal .slides section.section-slide {
+  background-color: $uog-dark-blue;
+  color: white;
+  height: 100%; // needed so % min-height resolves on children
+
+  h1, h2 {
+    min-height: 14%;
+    margin-left: 10%;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    color: white;
+    font-size: 1.8em;
+    font-weight: 700;
+    border-bottom: 3px solid $uog-light-blue;
+    padding-bottom: 0.15em;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.85em;
+  }
+}
+
+// ============================================================
+// REGULAR SLIDES  (class="slide level2")
+// ============================================================
+
+.reveal .slides section.level2 h2 {
+  min-height: 14%;
+  margin-left: 10%;
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+  color: $uog-navy;
+  border-bottom: 2px solid $uog-navy;
+  padding-bottom: 0.1em;
+  margin-bottom: 0.5em;
+}
+
+// ============================================================
+// LOGO — repositioned to top-left on every slide
+// ============================================================
+
+// Quarto's footer.css sets max-height: 2.2rem — !important required to override
+.reveal .slide-logo {
+  max-height: 20vh !important;
+  width: auto !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: unset !important;
+  right: unset !important;
+}
+
+@media screen and (max-width: 800px) {
+  .reveal .slide-logo {
+    max-height: 12vh !important;
+  }
+}
+
+// ============================================================
+// FOOTER
+// ============================================================
+
+.reveal .footer {
+  font-size: 0.45em;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+// ============================================================
+// CALLOUT BOXES — aligned to UoG palette
+// ============================================================
+
+.callout.callout-style-default {
+  &.callout-note      { border-left-color: $uog-dark-blue   !important; }
+  &.callout-tip       { border-left-color: $uog-dark-green  !important; }
+  &.callout-warning   { border-left-color: $uog-light-yellow !important; }
+  &.callout-important { border-left-color: $uog-dark-red    !important; }
+  &.callout-caution   { border-left-color: $uog-dark-purple !important; }
+}
+
+// ============================================================
+// CODE BLOCKS
+// ============================================================
+
+.reveal pre {
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+  font-size: 0.8em;
+}
+
+// ============================================================
+// TABLES
+// ============================================================
+
+.reveal table {
+  thead tr {
+    background-color: $uog-navy;
+    color: white;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: rgba(1, 20, 81, 0.06);
+  }
+}
+
+// ============================================================
+// UTILITY CLASSES
+// ============================================================
+
+// Accent colours for inline use, e.g. [text]{.uog-blue}
+.uog-navy          { color: $uog-navy;         }
+.uog-dark-blue     { color: $uog-dark-blue;    }
+.uog-dark-purple   { color: $uog-dark-purple;  }
+.uog-light-blue    { color: $uog-light-blue;   }
+.uog-light-yellow  { color: $uog-light-yellow; }

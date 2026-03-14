@@ -47,3 +47,8 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Quarto rendered output
+*.html
+*_files/
+.quarto/
