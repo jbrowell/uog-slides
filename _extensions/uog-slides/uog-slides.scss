@@ -124,7 +124,7 @@ $selection-bg:                      $uog-navy;
 // ============================================================
 
 .reveal .slides section.level2 h2 {
-  min-height: 12%;
+  min-height: 14.6%;
   margin-left: 9%;
   display: flex;
   align-items: flex-end;
@@ -140,7 +140,6 @@ $selection-bg:                      $uog-navy;
 // .reveal — hence `:fullscreen .reveal …`, not `.reveal:fullscreen …`.
 :fullscreen .reveal .slides section.level2 h2,
 :-webkit-full-screen .reveal .slides section.level2 h2 {
-  min-height: 12%;
   margin-left: 17%;
 }
 
